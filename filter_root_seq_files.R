@@ -42,7 +42,7 @@ rootData <- lapply(c("R1", "I1", "R2"), function(readType){
 })
 
 branchData <- list.files(branchDataDir, pattern = "fastq.gz")
-message(paste0("branch sequencing files:", paste(branchData, collapse = "\n")))
+message(paste0("branch sequencing files:\n", paste(branchData, collapse = "\n")))
 branchData <- readFastq(branchDataDir, withIds = TRUE)
 
 n_root_reads <- sum(sapply(rootData, length))/3
